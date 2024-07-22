@@ -1,17 +1,9 @@
 
 :root {
-    --main-color: #00eeff;
-    --text-color: #ffffff;
-    --bg-color-01: #1f242d;
-    --bg-color-02: #323946;
-    --color-00: #0000001a;
-    
-    /* Extra */
-    --color-01: #999999;
-    --color-02: #009539;
-    --color-03: #7950f2;
-    --color-04: #c00000;
-    --color-05: #232323;
+    --cor-01: #00eeff;
+    --cor-02: #ffffff;
+    --cor-03: #1f242d;
+    --cor-04: #323946;
 }
 
 * {
@@ -23,8 +15,8 @@
 }
 
 body {
-    background: var(--bg-color-01);
-    color: var(--text-color);
+    background: var(--cor-03);
+    color: var(--cor-02);
 }
 
 section {
@@ -33,7 +25,7 @@ section {
 }
 
 span {
-    color: var(--main-color);
+    color: var(--cor-01);
 }
 
 h2 {
@@ -60,8 +52,8 @@ form textarea {
     width: 100%;
     padding: 1rem;
     letter-spacing: 0.1rem;
-    color: var(--text-color);
-    background: var(--bg-color-02);
+    color: var(--cor-02);
+    background: var(--cor-04);
     border-radius: 0.5rem;
     margin: 0.4rem 0;
     resize: none;
@@ -78,8 +70,8 @@ form textarea {
 .btn {
     margin-top: 1.2rem;
     padding: 0.7rem 1.8rem;
-    background: var(--main-color);
-    color: var(--bg-color-02);
+    background: var(--cor-01);
+    color: var(--cor-04);
     letter-spacing: 0.1rem;
     border-radius: 2rem;
     font-weight: 700;
@@ -88,8 +80,13 @@ form textarea {
 }
 
 .btn:hover {
-    box-shadow: 0 0 0.3rem var(--main-color);
-    color: var(--main-color);
+    box-shadow: 0 0 0.3rem var(--cor-01);
+    color: var(--cor-01);
     background: inherit;
     cursor: pointer;
+}
+
+#statusEnvio {
+    margin-top: 1rem;
+    /* TO BE CONTINUE... */
 }

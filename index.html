@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Formulário por E-mail</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- contact section -->
+    <section class="contato" id="contato">
+        
+        <form method="POST" id="formulario">
+            <h2>Entre em <span>Contato</span></h2>
+            
+            <!-- Substitua pela sua Chave de Acesso (Access Key) -->
+            <input type="hidden" name="access_key" value="dc65e16d-d899-49a0-9cb4-a06d5b7bcb65">
+
+            <!-- Cada input deve ter um atributo name="" -->
+            <div class="input-box">
+                <input type="text" name="nome" placeholder="Nome completo" required>
+                <input type="email" name="email" placeholder="E-mail" required>
+            </div>
+
+            <div class="input-box">
+                <input type="number" placeholder="Telefone">
+                <input type="text" placeholder="Assunto">
+            </div>
+
+            <textarea name="mensagem" placeholder="Escreva sua mensagem..." required cols="30" rows="8"></textarea>
+
+            <!-- Proteção contra spam Honeypot -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+            <button class="btn">Enviar Mensagem</button>
+
+            <div id="statusEnvio"></div>
+        </form>
+    </section>
+</body>
+<script src="./js/app.js"></script>
+</html>

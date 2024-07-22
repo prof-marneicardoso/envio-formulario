@@ -18,7 +18,6 @@ formulario.addEventListener('submit', function (evento) {
 
     statusEnvio.innerHTML = "Por favor, aguarde..."
 
-    /*
     // Envia os dados do formulário para a API
     fetch('https://api.web3forms.com/submit', {
         method: 'POST',
@@ -48,6 +47,5 @@ formulario.addEventListener('submit', function (evento) {
 
             mensagem.innerHTML = 'Ops, algo deu errado! Verifique o e-mail informado';
         }
-    })
-    */
+    });
 });

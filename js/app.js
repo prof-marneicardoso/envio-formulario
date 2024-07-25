@@ -13,7 +13,8 @@ formulario.addEventListener('submit', function (evento) {
     // console.log(formData);   // LOG
 
     // Converte para objeto
-    const dados = Object.fromEntries(formData);
+    // const dados = Object.fromEntries(formData);
+    const dados = Object.fromEntries(formData.entries());
     // console.log(dados);  // LOG
 
     statusEnvio.innerHTML = "Por favor, aguarde..."
@@ -21,7 +22,7 @@ formulario.addEventListener('submit', function (evento) {
     // Envia os dados do formulário para a API
     fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        mode: 'no-cors',
+        // mode: 'no-cors',
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
@@ -33,19 +34,19 @@ formulario.addEventListener('submit', function (evento) {
 
         let data = await response.json();
         if (response.status == 200) {
-            mensagem.innerHTML = "Mensagem enviada!";
+            statusEnvio.innerHTML = "Mensagem enviada!";
             console.log('IF');  // LOG
 
             // Esconde a mensagem, depois de N segundos
             setTimeout(() => {
-                mensagem.style.display = "none";
+                statusEnvio.style.display = "none";
             }, 3000);
 
         } else {
             console.log(response);  // LOG
             console.log('IF');  // LOG
 
-            mensagem.innerHTML = 'Ops, algo deu errado! Verifique o e-mail informado';
+            statusEnvio.innerHTML = 'Ops, algo deu errado! Verifique o e-mail informado';
         }
     });
 });
